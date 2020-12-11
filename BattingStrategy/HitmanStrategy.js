@@ -9,3 +9,5 @@ class HitmanStrategy extends BattingStrategy {
     return getRunForHitsman();
   }
 }
+
+module.exports = HitmanStrategy;
