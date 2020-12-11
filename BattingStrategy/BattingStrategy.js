@@ -1,0 +1,3 @@
+class BattingStrategy {
+  gerRun() {}
+}

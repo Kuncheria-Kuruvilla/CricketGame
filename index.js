@@ -1,21 +1,11 @@
-const Batsman = require("./Batsman");
+const Game = require("./Game");
 
-const TARGET = 20;
-const MAX_BALLS_IN_GAME = 6;
-const batsman = new Batsman();
+const TARGET = 56;
+const MAX_BALLS_IN_OVER = 6;
+const OVERS = 2;
 
-const didBatsmanWin = (runs) => runs > TARGET;
-for (let i = 0; i < MAX_BALLS_IN_GAME; i++) {
-  batsman.play();
-  if (didBatsmanWin(batsman.sumofRuns())) {
-    break;
-  }
-}
+const game = new Game(TARGET, MAX_BALLS_IN_OVER, OVERS);
 
-if (didBatsmanWin(batsman.sumofRuns())) {
-  console.log(batsman.runs);
-  console.log("Batsman has won");
-} else {
-  console.log(batsman.runs);
-  console.log("Batsman has lost");
-}
+game.startGame();
+
+game.displayGameResult();
