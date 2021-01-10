@@ -13,7 +13,20 @@
   "dependencies": {
     "nodemon": "^2.0.6"
   },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "jasmine": "^3.6.3",
     "jasmine-core": "^3.6.0",

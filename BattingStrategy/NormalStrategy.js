@@ -2,7 +2,7 @@ const { getRandomInt } = require("../util");
 const BattingStrategy = require("./BattingStrategy");
 
 class NormalStrategy extends BattingStrategy {
-  gerRun() {
+  getRun() {
     return getRandomInt(7);
   }
 }

@@ -1,3 +1,5 @@
 class BattingStrategy {
-  gerRun() {}
+  getRun() {}
 }
+
+module.exports = BattingStrategy;

@@ -1,12 +1,15 @@
-const createBatsman = require("./BatsMan");
+const createBattringStrategy = require("./BattingStrategy");
 const Bowler = require("./Bowler");
-const { NORMAL_BATSMAN, HITMAN } = require("./BatsMan/BatsManTypes");
+const Batsman = require("./Batsman");
 
-// const TARGET = 20;
-// const MAX_BALLS_IN_OVER = 6;
-// const OVERS = 2;
-const BATSMAN_TYPE = HITMAN;
-const batsman = createBatsman(BATSMAN_TYPE);
+const BATTING_TYPE = require("./BattingStrategy/BatsManTypes");
+const BOWLING_TYPE = require("./Umpire/BowlerType");
+
+const BATSMAN_TYPE = BATTING_TYPE.DEFENSIVE;
+const BOWLER_TYPE = BOWLING_TYPE.NORMAL;
+
+const battingStrategy = createBattringStrategy(BATSMAN_TYPE);
+const batsman = new Batsman(battingStrategy);
 const bowler = new Bowler();
 
 runs = [];

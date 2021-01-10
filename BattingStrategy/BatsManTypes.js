@@ -1,0 +1,8 @@
+const BATTING_TYPE = {
+  NORMAL_BATSMAN: 0,
+  HITMAN: 1,
+  DEFENSIVE: 2,
+  FINISHER: 3,
+};
+
+module.exports = BATTING_TYPE;

@@ -3,10 +3,10 @@ module.exports = function (config) {
   config.set({
     basePath: "",
     frameworks: ["jasmine", "browserify"],
-    files: ["*test.js"],
-    exclude: [],
+    files: ["**/*test.*.js"],
+    exclude: ["node_modules"],
     preprocessors: {
-      "*test.js": ["browserify"],
+      "**/*test.*.js": ["browserify"],
     },
     plugins: [
       require("karma-browserify"),
@@ -15,7 +15,10 @@ module.exports = function (config) {
       require("karma-spec-reporter"),
       require("karma-jasmine-html-reporter"),
     ],
-
+    // browserify: {
+    //   debug: true,
+    //   transform: [["babelify", { presets: ["es2015"] }]],
+    // },
     reporters: ["spec", "kjhtml"],
     port: 9876,
     colors: true,

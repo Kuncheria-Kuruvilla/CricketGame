@@ -1,6 +1,6 @@
 const Game = require("./Game");
 
-const TARGET = 56;
+const TARGET = 20;
 const MAX_BALLS_IN_OVER = 6;
 const OVERS = 2;
 
